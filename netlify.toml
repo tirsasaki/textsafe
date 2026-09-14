@@ -1,0 +1,8 @@
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+[build.environment]
+  # This value is intentionally embedded in canonical URLs, metadata, and sitemap output.
+  # Keep secret scanning enabled for CRON_SECRET and SUPABASE_SERVICE_ROLE_KEY.
+  SECRETS_SCAN_OMIT_KEYS = "NEXT_PUBLIC_SITE_URL"
