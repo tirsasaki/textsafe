@@ -38,7 +38,7 @@ For burn-after-reading messages, the PostgreSQL RPC locks the row, creates a sho
 - Node.js 20.9 or later
 - npm
 - A Supabase project
-- A Vercel project for production deployment
+- A Vercel or Netlify project for production deployment
 
 ## Local installation
 
@@ -63,7 +63,7 @@ Open [http://localhost:3000](http://localhost:3000). The root redirects to `/en`
 NEXT_PUBLIC_SUPABASE_URL=https://YOUR_PROJECT.supabase.co
 SUPABASE_SERVICE_ROLE_KEY=YOUR_SERVICE_ROLE_KEY
 CRON_SECRET=GENERATE_A_LONG_RANDOM_SECRET
-NEXT_PUBLIC_SITE_URL=http://localhost:3000
+NEXT_PUBLIC_SITE_URL=https://YOUR_DOMAIN.example
 ```
 
 Despite the `NEXT_PUBLIC_` prefix, the Supabase URL is not a credential. The service-role key must never use that prefix and must never be exposed to the browser. RLS is enabled with no policies for `anon` or `authenticated`; only server Route Handlers use the service role.
@@ -124,6 +124,18 @@ Use one cleanup mechanism, not both.
 3. Keep `SUPABASE_SERVICE_ROLE_KEY` and `CRON_SECRET` marked secret and scoped to the required environments.
 4. Deploy only after the migration has completed.
 5. Confirm `/en`, `/id`, create/retrieve, expiry, and one-time retrieval against disposable test messages.
+
+## Deploy to Netlify
+
+1. Import `tirsasaki/textsafe` in Netlify.
+2. Set the build command to `npm run build` and publish directory to `.next`; these values are also defined in `netlify.toml`.
+3. Add `NEXT_PUBLIC_SUPABASE_URL`, `SUPABASE_SERVICE_ROLE_KEY`, `CRON_SECRET`, and `NEXT_PUBLIC_SITE_URL` in Project configuration → Environment variables.
+4. Set `NEXT_PUBLIC_SITE_URL` to the final HTTPS Netlify or custom-domain origin.
+5. Keep `CRON_SECRET` and `SUPABASE_SERVICE_ROLE_KEY` secret. They must never be added to `SECRETS_SCAN_OMIT_KEYS`.
+6. `NEXT_PUBLIC_SITE_URL` is intentionally public and embedded in canonical URLs, metadata, and sitemap output. The committed `netlify.toml` excludes only this key from Netlify's environment-value scan while keeping secret scanning enabled.
+7. Apply the Supabase migration before testing message creation.
+
+The Vercel schedule in `vercel.json` is not used by Netlify. On Netlify deployments, configure a Netlify Scheduled Function or use Supabase Cron/pg_cron for periodic cleanup. Secret retrieval still rejects and deletes expired records even when scheduled cleanup is not configured.
 
 ## Production checklist
 
