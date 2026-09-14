@@ -3,6 +3,7 @@ node_modules/
 out/
 coverage/
 .env
+.env.example
 .env.local
 .env.*.local
 !.env.example
@@ -10,3 +11,4 @@ coverage/
 .DS_Store
 .vercel/
 .netlify/
+README.md
