@@ -1,0 +1,340 @@
+{
+  "common": {
+    "appName": "TextSafe",
+    "tagline": "Share encrypted messages securely.",
+    "nav": {
+      "create": "Create Secret",
+      "open": "Open Secret",
+      "security": "Security",
+      "faq": "FAQ",
+      "privacy": "Privacy",
+      "disclaimer": "Disclaimer"
+    },
+    "language": "Change language",
+    "theme": "Change color theme",
+    "light": "Light",
+    "dark": "Dark",
+    "github": "GitHub",
+    "encryptionBrowser": "Encryption happens in your browser.",
+    "skipToContent": "Skip to content",
+    "menu": "Open navigation menu",
+    "closeMenu": "Close navigation menu"
+  },
+  "home": {
+    "metaTitle": "TextSafe — Share Encrypted Messages Securely",
+    "metaDescription": "Create expiring, client-side encrypted messages and share them with a private link.",
+    "heroTitle": "Share secrets without exposing the message.",
+    "heroDescription": "TextSafe encrypts your message inside your browser before storing it. The server never receives your original message or password.",
+    "createButton": "Create an Encrypted Message",
+    "openButton": "Open a Secret",
+    "howTitle": "How it works",
+    "howDescription": "Four simple steps keep the message and its password apart.",
+    "steps": [
+      {
+        "title": "Write your message",
+        "description": "Compose up to 20,000 characters in your browser."
+      },
+      {
+        "title": "Encrypt it with a password",
+        "description": "AES-256-GCM encryption happens on your device."
+      },
+      {
+        "title": "Share the generated link",
+        "description": "The link contains only a random message identifier."
+      },
+      {
+        "title": "Send the password separately",
+        "description": "Use a different, trusted communication channel."
+      }
+    ],
+    "featuresTitle": "Privacy by design",
+    "features": [
+      "Client-side encryption",
+      "AES-256-GCM",
+      "Expiring messages",
+      "Burn after reading",
+      "No account required",
+      "No plaintext storage",
+      "Open-source friendly"
+    ],
+    "warning": "Send the link and password through different communication channels.",
+    "storageTitle": "What the server stores",
+    "storageDescription": "Supabase receives only the encrypted package and the minimum settings needed to deliver it.",
+    "storageItems": [
+      "Ciphertext",
+      "Salt",
+      "IV",
+      "Key-derivation parameters",
+      "Expiration time",
+      "Burn-after-reading setting"
+    ],
+    "ctaTitle": "Ready to share a private note?",
+    "ctaDescription": "No signup. Your password never leaves your browser."
+  },
+  "create": {
+    "metaTitle": "Create an Encrypted Message — TextSafe",
+    "metaDescription": "Encrypt a secret in your browser and create an expiring private link.",
+    "title": "Create an encrypted message",
+    "description": "Your message and password are processed only in this browser.",
+    "messageLabel": "Secret message",
+    "messagePlaceholder": "Write the message you want to protect…",
+    "characterCount": "{current} of {maximum} characters",
+    "passwordLabel": "Password or passphrase",
+    "passwordPlaceholder": "Use at least 14 characters",
+    "confirmLabel": "Confirm password",
+    "confirmPlaceholder": "Enter the password again",
+    "showPassword": "Show password",
+    "hidePassword": "Hide password",
+    "generatePassword": "Generate strong password",
+    "strengthLabel": "Password strength",
+    "strengths": [
+      "Very weak",
+      "Weak",
+      "Fair",
+      "Strong",
+      "Very strong"
+    ],
+    "passwordAdvice": "Minimum 10 characters. A passphrase of 14 or more characters is recommended.",
+    "expiryLabel": "Expires after",
+    "expirations": [
+      {
+        "label": "10 minutes",
+        "value": 600
+      },
+      {
+        "label": "1 hour",
+        "value": 3600
+      },
+      {
+        "label": "24 hours",
+        "value": 86400
+      },
+      {
+        "label": "3 days",
+        "value": 259200
+      },
+      {
+        "label": "7 days",
+        "value": 604800
+      }
+    ],
+    "burnLabel": "Burn after reading",
+    "burnDescription": "The encrypted payload can be retrieved only once.",
+    "honeypotLabel": "Leave this field empty",
+    "submit": "Create Secure Link",
+    "encrypting": "Encrypting securely…",
+    "weakConfirm": "This password appears weak. Continue anyway?",
+    "errors": {
+      "required": "Enter a message.",
+      "tooLong": "The message exceeds 20,000 characters.",
+      "passwordLength": "Use a password of at least 10 characters.",
+      "passwordMismatch": "The passwords do not match.",
+      "unsupported": "This browser does not support the required Web Crypto features.",
+      "request": "The secure link could not be created. Please try again.",
+      "rateLimit": "Too many requests. Please wait before creating another message."
+    },
+    "successTitle": "Your secure link is ready",
+    "successDescription": "The plaintext and password have been cleared from this page.",
+    "linkLabel": "Secret link",
+    "copyLink": "Copy link",
+    "copied": "Copied",
+    "share": "Share link",
+    "createAnother": "Create another secret",
+    "passwordSeparate": "The password is not included in this URL. Send it separately through another channel.",
+    "shareTitle": "TextSafe secret",
+    "shareText": "Open this encrypted message. I will send the password separately."
+  },
+  "open": {
+    "metaTitle": "Open an Encrypted Message — TextSafe",
+    "metaDescription": "Retrieve and decrypt a TextSafe message locally in your browser.",
+    "title": "Open an encrypted message",
+    "loading": "Checking message availability…",
+    "readyTitle": "Message is ready to retrieve",
+    "readyDescription": "Retrieval sends only the encrypted payload to this browser.",
+    "expires": "Expires {date}",
+    "burnWarning": "This message will be permanently destroyed as soon as it is retrieved. Make sure you have the correct password.",
+    "normalWarning": "The encrypted payload will remain available until its expiration time.",
+    "retrieveBurn": "Retrieve and Destroy Message",
+    "retrieveNormal": "Retrieve Encrypted Message",
+    "retrieving": "Retrieving encrypted message…",
+    "passwordTitle": "Decrypt in your browser",
+    "passwordDescription": "Your password is never sent to TextSafe.",
+    "passwordLabel": "Password",
+    "passwordPlaceholder": "Enter the password",
+    "showPassword": "Show password",
+    "hidePassword": "Hide password",
+    "decrypt": "Decrypt Message",
+    "decrypting": "Decrypting…",
+    "successTitle": "Message decrypted",
+    "messageLabel": "Decrypted message",
+    "copy": "Copy Message",
+    "copied": "Copied",
+    "hide": "Hide Message",
+    "show": "Show Message",
+    "clear": "Clear Message",
+    "cleared": "The decrypted message was cleared from this page.",
+    "unable": "Unable to decrypt. The password may be incorrect or the message may be corrupted.",
+    "burnedFailure": "Because this was a burn-after-reading message, it cannot be retrieved again after a failed decryption.",
+    "expiredTitle": "Message unavailable",
+    "expired": "This message has expired or is no longer available.",
+    "destroyedTitle": "Message destroyed",
+    "destroyed": "This burn-after-reading message has already been retrieved.",
+    "notFoundTitle": "Message not found",
+    "notFound": "This secret is unavailable. Check the link or ask the sender to create a new one.",
+    "networkTitle": "Connection problem",
+    "network": "TextSafe could not reach the server. Check your connection and try again.",
+    "retry": "Try again",
+    "invalid": "This secret link is invalid."
+  },
+  "security": {
+    "metaTitle": "Security — TextSafe",
+    "metaDescription": "Learn how TextSafe encrypts messages, what it protects, and its limitations.",
+    "title": "Security at TextSafe",
+    "intro": "TextSafe is designed so the service does not need your plaintext or password.",
+    "sections": [
+      {
+        "title": "Encryption in your browser",
+        "body": "Your device derives a 256-bit key from the password with PBKDF2-SHA-256 and a random salt, then encrypts the message with AES-256-GCM and a unique 12-byte IV. Only the resulting ciphertext is sent to the server."
+      },
+      {
+        "title": "Passwords cannot be recovered",
+        "body": "Passwords are never sent to or stored by TextSafe. If a password is lost, neither TextSafe nor the database administrator can recover the message."
+      },
+      {
+        "title": "Salt and IV",
+        "body": "The random salt and IV are not secrets. They are stored with the ciphertext and must be unique for safe key derivation and authenticated encryption."
+      },
+      {
+        "title": "Burn after reading",
+        "body": "The server considers a message read when its ciphertext is first retrieved. It cannot know whether decryption succeeded, so a wrong password can permanently consume a burn-after-reading message."
+      },
+      {
+        "title": "Minimum metadata",
+        "body": "The application stores expiration and delivery settings. Hosting infrastructure may still process technical metadata such as IP address, request time, and user agent in access logs."
+      },
+      {
+        "title": "Protect your device",
+        "body": "Malware, keyloggers, malicious browser extensions, screenshots, clipboard managers, phishing, or a compromised device can expose a message before or after encryption."
+      }
+    ],
+    "separateTitle": "Keep the two parts separate",
+    "separateBody": "Send the secret link and password through different trusted channels. Anyone who obtains both can decrypt the message.",
+    "threatTitle": "Threat model",
+    "protectsTitle": "TextSafe helps protect against",
+    "protects": [
+      "A database leak containing only ciphertext",
+      "A database administrator trying to read message contents",
+      "Accidental plaintext storage by this application",
+      "Undetected ciphertext modification, through AES-GCM authentication"
+    ],
+    "notProtectsTitle": "TextSafe does not protect against",
+    "notProtects": [
+      "Weak or reused passwords",
+      "Sending the link and password together",
+      "Compromised devices",
+      "Screenshots and clipboard history",
+      "Keyloggers or malicious extensions",
+      "Phishing",
+      "Someone who already knows the password"
+    ],
+    "critical": "Do not use TextSafe as the only protection for emergencies or extremely critical data. No web application can guarantee the security of a compromised device."
+  },
+  "faq": {
+    "metaTitle": "Frequently Asked Questions — TextSafe",
+    "metaDescription": "Answers about TextSafe encryption, storage, passwords, expiration, and privacy.",
+    "title": "Frequently asked questions",
+    "intro": "Straightforward answers about how encrypted messages work.",
+    "items": [
+      {
+        "q": "Can TextSafe read my message?",
+        "a": "TextSafe is designed not to receive the plaintext or password. Encryption and decryption happen in your browser."
+      },
+      {
+        "q": "Where is my message stored?",
+        "a": "Supabase stores an encrypted payload containing ciphertext, salt, IV, and key-derivation parameters, plus delivery settings."
+      },
+      {
+        "q": "Is my password stored?",
+        "a": "No. The password stays in browser memory only while you use the form and is never sent to the API."
+      },
+      {
+        "q": "What happens if I forget my password?",
+        "a": "The message cannot be recovered. There is no password reset or recovery key."
+      },
+      {
+        "q": "What does burn after reading mean?",
+        "a": "The encrypted payload can be retrieved once. It is consumed at retrieval time, even if the recipient later enters a wrong password."
+      },
+      {
+        "q": "Why should I send the password separately?",
+        "a": "Separating the link and password reduces the chance that one intercepted conversation exposes both parts."
+      },
+      {
+        "q": "Can an expired message be recovered?",
+        "a": "No. Expired records are rejected and removed."
+      },
+      {
+        "q": "Is TextSafe completely anonymous?",
+        "a": "No absolute anonymity is promised. Hosting providers may process IP addresses and user agents in infrastructure logs."
+      },
+      {
+        "q": "What encryption does TextSafe use?",
+        "a": "AES-256-GCM authenticated encryption with keys derived using PBKDF2-SHA-256, a random salt, and 600,000 iterations."
+      },
+      {
+        "q": "Is TextSafe a replacement for an encrypted messenger?",
+        "a": "No. It is a small tool for sharing an encrypted note, not a complete end-to-end encrypted conversation platform."
+      }
+    ]
+  },
+  "privacy": {
+    "metaTitle": "Privacy — TextSafe",
+    "metaDescription": "Understand what TextSafe stores and what hosting infrastructure may process.",
+    "title": "Privacy",
+    "intro": "TextSafe minimizes the data needed to provide expiring encrypted messages.",
+    "sections": [
+      {
+        "title": "No account required",
+        "body": "You do not create an account or profile to create or open a message."
+      },
+      {
+        "title": "Message storage",
+        "body": "TextSafe does not intentionally store plaintext or passwords. It stores ciphertext, salt, IV, key-derivation parameters, expiration time, and burn-after-reading settings."
+      },
+      {
+        "title": "Retention",
+        "body": "Records remain until their expiration time, or are consumed earlier when burn after reading is enabled. Cleanup jobs remove expired records."
+      },
+      {
+        "title": "Technical metadata",
+        "body": "Vercel, Supabase, network providers, and other hosting infrastructure may process IP addresses, request times, user agents, and operational logs. TextSafe therefore does not claim zero logs."
+      },
+      {
+        "title": "Analytics and advertising",
+        "body": "Analytics and third-party scripts are not loaded on secret-message pages. TextSafe does not sell or use message contents for advertising."
+      }
+    ]
+  },
+  "disclaimer": {
+    "metaTitle": "Disclaimer — TextSafe",
+    "metaDescription": "Important limitations and responsibilities when using TextSafe.",
+    "title": "Disclaimer",
+    "intro": "Use TextSafe responsibly and understand its limits.",
+    "items": [
+      "You are responsible for the content you create and share.",
+      "Do not use TextSafe for illegal activity.",
+      "Message availability or recovery is not guaranteed.",
+      "Lost passwords cannot be recovered.",
+      "Burn-after-reading messages cannot be recovered after retrieval.",
+      "TextSafe does not secure a compromised device or communication channel."
+    ]
+  },
+  "openLookup": {
+    "title": "Open a secret",
+    "description": "Paste a complete TextSafe link or enter its message ID.",
+    "label": "Secret link or ID",
+    "placeholder": "https://…/en/open/…",
+    "button": "Open Secret",
+    "invalid": "Enter a valid TextSafe link or UUID."
+  }
+}

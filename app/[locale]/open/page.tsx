@@ -1,0 +1,4 @@
+import { notFound } from "next/navigation"; import { OpenLookup } from "@/components/open-secret/open-lookup"; import { isLocale } from "@/lib/i18n/config"; import { getMessages } from "@/lib/i18n/messages"; import { pageMetadata } from "@/lib/seo/metadata"; import type { Metadata } from "next";
+type Props={params:Promise<{locale:string}>};
+export async function generateMetadata({params}:Props):Promise<Metadata>{const{locale}=await params;if(!isLocale(locale))return{};const m=getMessages(locale).openLookup;return pageMetadata(locale,"open",m.title,m.description);}
+export default async function Page({params}:Props){const{locale}=await params;if(!isLocale(locale))notFound();const m=getMessages(locale).openLookup;return <div className="container-page max-w-3xl py-14"><h1 className="text-4xl font-black">{m.title}</h1><p className="mt-3 text-lg text-[var(--muted)]">{m.description}</p><div className="mt-8"><OpenLookup locale={locale} copy={m}/></div></div>;}

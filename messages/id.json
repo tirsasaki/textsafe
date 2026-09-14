@@ -1,0 +1,340 @@
+{
+  "common": {
+    "appName": "TextSafe",
+    "tagline": "Bagikan pesan terenkripsi dengan aman.",
+    "nav": {
+      "create": "Buat Pesan",
+      "open": "Buka Pesan",
+      "security": "Keamanan",
+      "faq": "FAQ",
+      "privacy": "Privasi",
+      "disclaimer": "Disclaimer"
+    },
+    "language": "Ganti bahasa",
+    "theme": "Ganti tema warna",
+    "light": "Terang",
+    "dark": "Gelap",
+    "github": "GitHub",
+    "encryptionBrowser": "Enkripsi berlangsung di browser Anda.",
+    "skipToContent": "Lewati ke konten",
+    "menu": "Buka menu navigasi",
+    "closeMenu": "Tutup menu navigasi"
+  },
+  "home": {
+    "metaTitle": "TextSafe — Bagikan Pesan Terenkripsi dengan Aman",
+    "metaDescription": "Buat pesan terenkripsi di sisi klien yang dapat kedaluwarsa dan bagikan melalui tautan privat.",
+    "heroTitle": "Bagikan rahasia tanpa mengekspos isi pesan.",
+    "heroDescription": "TextSafe mengenkripsi pesan di dalam browser sebelum menyimpannya. Server tidak pernah menerima pesan asli atau password Anda.",
+    "createButton": "Buat Pesan Terenkripsi",
+    "openButton": "Buka Pesan Rahasia",
+    "howTitle": "Cara kerja",
+    "howDescription": "Empat langkah sederhana memisahkan pesan dari password-nya.",
+    "steps": [
+      {
+        "title": "Tulis pesan Anda",
+        "description": "Tulis hingga 20.000 karakter di browser."
+      },
+      {
+        "title": "Enkripsi dengan password",
+        "description": "Enkripsi AES-256-GCM dilakukan di perangkat Anda."
+      },
+      {
+        "title": "Bagikan tautan",
+        "description": "Tautan hanya berisi pengenal pesan acak."
+      },
+      {
+        "title": "Kirim password terpisah",
+        "description": "Gunakan saluran komunikasi tepercaya yang berbeda."
+      }
+    ],
+    "featuresTitle": "Privasi sejak awal",
+    "features": [
+      "Enkripsi sisi klien",
+      "AES-256-GCM",
+      "Pesan kedaluwarsa",
+      "Hapus setelah dibaca",
+      "Tanpa akun",
+      "Tanpa penyimpanan plaintext",
+      "Ramah sumber terbuka"
+    ],
+    "warning": "Kirimkan tautan dan password melalui saluran komunikasi yang berbeda.",
+    "storageTitle": "Data yang disimpan server",
+    "storageDescription": "Supabase hanya menerima paket terenkripsi dan pengaturan minimum untuk mengirimkannya.",
+    "storageItems": [
+      "Ciphertext",
+      "Salt",
+      "IV",
+      "Parameter pembentukan kunci",
+      "Waktu kedaluwarsa",
+      "Pengaturan hapus setelah dibaca"
+    ],
+    "ctaTitle": "Siap membagikan catatan privat?",
+    "ctaDescription": "Tanpa pendaftaran. Password tidak pernah meninggalkan browser."
+  },
+  "create": {
+    "metaTitle": "Buat Pesan Terenkripsi — TextSafe",
+    "metaDescription": "Enkripsi pesan rahasia di browser dan buat tautan privat yang dapat kedaluwarsa.",
+    "title": "Buat pesan terenkripsi",
+    "description": "Pesan dan password hanya diproses di browser ini.",
+    "messageLabel": "Pesan rahasia",
+    "messagePlaceholder": "Tulis pesan yang ingin Anda lindungi…",
+    "characterCount": "{current} dari {maximum} karakter",
+    "passwordLabel": "Password atau frasa sandi",
+    "passwordPlaceholder": "Gunakan minimal 14 karakter",
+    "confirmLabel": "Konfirmasi password",
+    "confirmPlaceholder": "Masukkan kembali password",
+    "showPassword": "Tampilkan password",
+    "hidePassword": "Sembunyikan password",
+    "generatePassword": "Buat password kuat",
+    "strengthLabel": "Kekuatan password",
+    "strengths": [
+      "Sangat lemah",
+      "Lemah",
+      "Cukup",
+      "Kuat",
+      "Sangat kuat"
+    ],
+    "passwordAdvice": "Minimal 10 karakter. Disarankan menggunakan frasa sandi 14 karakter atau lebih.",
+    "expiryLabel": "Kedaluwarsa setelah",
+    "expirations": [
+      {
+        "label": "10 menit",
+        "value": 600
+      },
+      {
+        "label": "1 jam",
+        "value": 3600
+      },
+      {
+        "label": "24 jam",
+        "value": 86400
+      },
+      {
+        "label": "3 hari",
+        "value": 259200
+      },
+      {
+        "label": "7 hari",
+        "value": 604800
+      }
+    ],
+    "burnLabel": "Hapus setelah dibaca",
+    "burnDescription": "Payload terenkripsi hanya dapat diambil satu kali.",
+    "honeypotLabel": "Biarkan kolom ini kosong",
+    "submit": "Buat Tautan Aman",
+    "encrypting": "Mengenkripsi dengan aman…",
+    "weakConfirm": "Password ini tampak lemah. Tetap lanjutkan?",
+    "errors": {
+      "required": "Masukkan pesan.",
+      "tooLong": "Pesan melebihi 20.000 karakter.",
+      "passwordLength": "Gunakan password minimal 10 karakter.",
+      "passwordMismatch": "Konfirmasi password tidak sama.",
+      "unsupported": "Browser ini tidak mendukung fitur Web Crypto yang diperlukan.",
+      "request": "Tautan aman gagal dibuat. Silakan coba lagi.",
+      "rateLimit": "Terlalu banyak permintaan. Tunggu sebelum membuat pesan lain."
+    },
+    "successTitle": "Tautan aman sudah siap",
+    "successDescription": "Plaintext dan password telah dibersihkan dari halaman ini.",
+    "linkLabel": "Tautan rahasia",
+    "copyLink": "Salin tautan",
+    "copied": "Tersalin",
+    "share": "Bagikan tautan",
+    "createAnother": "Buat pesan lain",
+    "passwordSeparate": "Password tidak disertakan dalam URL ini. Kirimkan secara terpisah melalui saluran lain.",
+    "shareTitle": "Pesan rahasia TextSafe",
+    "shareText": "Buka pesan terenkripsi ini. Password akan saya kirimkan secara terpisah."
+  },
+  "open": {
+    "metaTitle": "Buka Pesan Terenkripsi — TextSafe",
+    "metaDescription": "Ambil dan dekripsi pesan TextSafe secara lokal di browser.",
+    "title": "Buka pesan terenkripsi",
+    "loading": "Memeriksa ketersediaan pesan…",
+    "readyTitle": "Pesan siap diambil",
+    "readyDescription": "Pengambilan hanya mengirimkan payload terenkripsi ke browser ini.",
+    "expires": "Kedaluwarsa {date}",
+    "burnWarning": "Pesan ini akan dihapus permanen segera setelah diambil. Pastikan Anda memiliki password yang benar.",
+    "normalWarning": "Payload terenkripsi akan tetap tersedia hingga waktu kedaluwarsanya.",
+    "retrieveBurn": "Ambil dan Hapus Pesan",
+    "retrieveNormal": "Ambil Pesan Terenkripsi",
+    "retrieving": "Mengambil pesan terenkripsi…",
+    "passwordTitle": "Dekripsi di browser Anda",
+    "passwordDescription": "Password tidak pernah dikirimkan ke TextSafe.",
+    "passwordLabel": "Password",
+    "passwordPlaceholder": "Masukkan password",
+    "showPassword": "Tampilkan password",
+    "hidePassword": "Sembunyikan password",
+    "decrypt": "Dekripsi Pesan",
+    "decrypting": "Mendekripsi…",
+    "successTitle": "Pesan berhasil didekripsi",
+    "messageLabel": "Pesan hasil dekripsi",
+    "copy": "Salin Pesan",
+    "copied": "Tersalin",
+    "hide": "Sembunyikan Pesan",
+    "show": "Tampilkan Pesan",
+    "clear": "Bersihkan Pesan",
+    "cleared": "Pesan hasil dekripsi telah dibersihkan dari halaman ini.",
+    "unable": "Tidak dapat mendekripsi. Password mungkin salah atau pesan mungkin rusak.",
+    "burnedFailure": "Karena pesan ini menggunakan hapus setelah dibaca, pesan tidak dapat diambil kembali setelah dekripsi gagal.",
+    "expiredTitle": "Pesan tidak tersedia",
+    "expired": "Pesan ini telah kedaluwarsa atau sudah tidak tersedia.",
+    "destroyedTitle": "Pesan telah dihapus",
+    "destroyed": "Pesan hapus-setelah-dibaca ini sudah pernah diambil.",
+    "notFoundTitle": "Pesan tidak ditemukan",
+    "notFound": "Pesan rahasia ini tidak tersedia. Periksa tautan atau minta pengirim membuat pesan baru.",
+    "networkTitle": "Masalah koneksi",
+    "network": "TextSafe tidak dapat menghubungi server. Periksa koneksi lalu coba lagi.",
+    "retry": "Coba lagi",
+    "invalid": "Tautan pesan rahasia ini tidak valid."
+  },
+  "security": {
+    "metaTitle": "Keamanan — TextSafe",
+    "metaDescription": "Pelajari cara TextSafe mengenkripsi pesan, perlindungan, dan keterbatasannya.",
+    "title": "Keamanan di TextSafe",
+    "intro": "TextSafe dirancang agar layanan tidak memerlukan plaintext atau password Anda.",
+    "sections": [
+      {
+        "title": "Enkripsi di browser",
+        "body": "Perangkat Anda membentuk kunci 256-bit dari password dengan PBKDF2-SHA-256 dan salt acak, lalu mengenkripsi pesan memakai AES-256-GCM dan IV unik 12 byte. Hanya ciphertext hasilnya yang dikirim ke server."
+      },
+      {
+        "title": "Password tidak dapat dipulihkan",
+        "body": "Password tidak pernah dikirim atau disimpan oleh TextSafe. Jika hilang, TextSafe maupun administrator database tidak dapat memulihkan pesan."
+      },
+      {
+        "title": "Salt dan IV",
+        "body": "Salt dan IV acak bukan data rahasia. Keduanya disimpan bersama ciphertext dan harus unik untuk pembentukan kunci dan enkripsi terautentikasi yang aman."
+      },
+      {
+        "title": "Hapus setelah dibaca",
+        "body": "Server menganggap pesan telah dibaca saat ciphertext pertama kali diambil. Server tidak mengetahui apakah dekripsi berhasil, sehingga password salah dapat menghabiskan pesan secara permanen."
+      },
+      {
+        "title": "Metadata minimum",
+        "body": "Aplikasi menyimpan waktu kedaluwarsa dan pengaturan pengiriman. Infrastruktur hosting masih dapat memproses metadata teknis seperti alamat IP, waktu permintaan, dan user-agent dalam access log."
+      },
+      {
+        "title": "Lindungi perangkat",
+        "body": "Malware, keylogger, ekstensi browser berbahaya, tangkapan layar, clipboard manager, phishing, atau perangkat yang disusupi dapat mengekspos pesan sebelum atau sesudah enkripsi."
+      }
+    ],
+    "separateTitle": "Pisahkan kedua bagian",
+    "separateBody": "Kirim tautan rahasia dan password melalui saluran tepercaya yang berbeda. Siapa pun yang memperoleh keduanya dapat mendekripsi pesan.",
+    "threatTitle": "Model ancaman",
+    "protectsTitle": "TextSafe membantu melindungi dari",
+    "protects": [
+      "Kebocoran database yang hanya berisi ciphertext",
+      "Administrator database yang mencoba membaca isi pesan",
+      "Penyimpanan plaintext tidak disengaja oleh aplikasi",
+      "Perubahan ciphertext yang tidak terdeteksi, melalui autentikasi AES-GCM"
+    ],
+    "notProtectsTitle": "TextSafe tidak melindungi dari",
+    "notProtects": [
+      "Password lemah atau digunakan ulang",
+      "Tautan dan password dikirim bersamaan",
+      "Perangkat yang telah disusupi",
+      "Tangkapan layar dan riwayat clipboard",
+      "Keylogger atau ekstensi berbahaya",
+      "Phishing",
+      "Seseorang yang sudah mengetahui password"
+    ],
+    "critical": "Jangan gunakan TextSafe sebagai satu-satunya perlindungan untuk keadaan darurat atau data yang sangat kritis. Tidak ada aplikasi web yang dapat menjamin keamanan perangkat yang telah disusupi."
+  },
+  "faq": {
+    "metaTitle": "Pertanyaan Umum — TextSafe",
+    "metaDescription": "Jawaban mengenai enkripsi, penyimpanan, password, kedaluwarsa, dan privasi TextSafe.",
+    "title": "Pertanyaan umum",
+    "intro": "Jawaban langsung mengenai cara kerja pesan terenkripsi.",
+    "items": [
+      {
+        "q": "Apakah TextSafe dapat membaca pesan saya?",
+        "a": "TextSafe dirancang agar tidak menerima plaintext atau password. Enkripsi dan dekripsi berlangsung di browser Anda."
+      },
+      {
+        "q": "Di mana pesan saya disimpan?",
+        "a": "Supabase menyimpan payload terenkripsi yang berisi ciphertext, salt, IV, parameter pembentukan kunci, serta pengaturan pengiriman."
+      },
+      {
+        "q": "Apakah password saya disimpan?",
+        "a": "Tidak. Password hanya berada di memori browser selama Anda menggunakan formulir dan tidak pernah dikirim ke API."
+      },
+      {
+        "q": "Apa yang terjadi jika saya lupa password?",
+        "a": "Pesan tidak dapat dipulihkan. Tidak tersedia pengaturan ulang password atau kunci pemulihan."
+      },
+      {
+        "q": "Apa arti hapus setelah dibaca?",
+        "a": "Payload terenkripsi hanya dapat diambil sekali. Pesan dikonsumsi saat pengambilan, meskipun penerima kemudian memasukkan password yang salah."
+      },
+      {
+        "q": "Mengapa password harus dikirim terpisah?",
+        "a": "Memisahkan tautan dan password mengurangi risiko satu percakapan yang disadap mengekspos keduanya."
+      },
+      {
+        "q": "Apakah pesan kedaluwarsa dapat dipulihkan?",
+        "a": "Tidak. Pesan kedaluwarsa ditolak dan dihapus."
+      },
+      {
+        "q": "Apakah TextSafe sepenuhnya anonim?",
+        "a": "Anonimitas mutlak tidak dijanjikan. Penyedia hosting dapat memproses alamat IP dan user-agent dalam log infrastruktur."
+      },
+      {
+        "q": "Enkripsi apa yang digunakan TextSafe?",
+        "a": "Enkripsi terautentikasi AES-256-GCM dengan kunci yang dibentuk menggunakan PBKDF2-SHA-256, salt acak, dan 600.000 iterasi."
+      },
+      {
+        "q": "Apakah TextSafe pengganti aplikasi pesan terenkripsi?",
+        "a": "Bukan. TextSafe adalah alat kecil untuk membagikan catatan terenkripsi, bukan platform percakapan terenkripsi end-to-end lengkap."
+      }
+    ]
+  },
+  "privacy": {
+    "metaTitle": "Privasi — TextSafe",
+    "metaDescription": "Pahami data yang disimpan TextSafe dan yang mungkin diproses infrastruktur hosting.",
+    "title": "Privasi",
+    "intro": "TextSafe meminimalkan data yang diperlukan untuk menyediakan pesan terenkripsi yang dapat kedaluwarsa.",
+    "sections": [
+      {
+        "title": "Tanpa akun",
+        "body": "Anda tidak membuat akun atau profil untuk membuat maupun membuka pesan."
+      },
+      {
+        "title": "Penyimpanan pesan",
+        "body": "TextSafe tidak sengaja menyimpan plaintext atau password. Data yang disimpan adalah ciphertext, salt, IV, parameter pembentukan kunci, waktu kedaluwarsa, dan pengaturan hapus setelah dibaca."
+      },
+      {
+        "title": "Retensi",
+        "body": "Data disimpan sampai waktu kedaluwarsa, atau dikonsumsi lebih awal ketika hapus setelah dibaca aktif. Tugas pembersihan menghapus data kedaluwarsa."
+      },
+      {
+        "title": "Metadata teknis",
+        "body": "Vercel, Supabase, penyedia jaringan, dan infrastruktur hosting lain mungkin memproses alamat IP, waktu permintaan, user-agent, dan log operasional. Karena itu TextSafe tidak mengklaim zero logs."
+      },
+      {
+        "title": "Analitik dan iklan",
+        "body": "Analitik dan skrip pihak ketiga tidak dimuat pada halaman pesan rahasia. TextSafe tidak menjual atau menggunakan isi pesan untuk iklan."
+      }
+    ]
+  },
+  "disclaimer": {
+    "metaTitle": "Disclaimer — TextSafe",
+    "metaDescription": "Keterbatasan dan tanggung jawab penting saat menggunakan TextSafe.",
+    "title": "Disclaimer",
+    "intro": "Gunakan TextSafe secara bertanggung jawab dan pahami batasannya.",
+    "items": [
+      "Anda bertanggung jawab atas isi yang dibuat dan dibagikan.",
+      "Jangan gunakan TextSafe untuk aktivitas ilegal.",
+      "Ketersediaan atau pemulihan pesan tidak dijamin.",
+      "Password yang hilang tidak dapat dipulihkan.",
+      "Pesan hapus-setelah-dibaca tidak dapat dipulihkan setelah diambil.",
+      "TextSafe tidak mengamankan perangkat atau saluran komunikasi yang telah disusupi."
+    ]
+  },
+  "openLookup": {
+    "title": "Buka pesan rahasia",
+    "description": "Tempel tautan TextSafe lengkap atau masukkan ID pesan.",
+    "label": "Tautan atau ID pesan",
+    "placeholder": "https://…/id/open/…",
+    "button": "Buka Pesan",
+    "invalid": "Masukkan tautan TextSafe atau UUID yang valid."
+  }
+}

@@ -1,0 +1,5 @@
+import type { Metadata } from "next"; import { notFound } from "next/navigation";
+import { CreateSecretForm } from "@/components/create-secret/create-secret-form"; import { isLocale } from "@/lib/i18n/config"; import { getMessages } from "@/lib/i18n/messages"; import { pageMetadata } from "@/lib/seo/metadata";
+type Props={params:Promise<{locale:string}>};
+export async function generateMetadata({params}:Props):Promise<Metadata>{const{locale}=await params;if(!isLocale(locale))return{};const m=getMessages(locale).create;return pageMetadata(locale,"create",m.metaTitle,m.metaDescription);}
+export default async function Page({params}:Props){const{locale}=await params;if(!isLocale(locale))notFound();const m=getMessages(locale);return <div className="container-page max-w-4xl py-14"><h1 className="text-4xl font-black">{m.create.title}</h1><p className="mt-3 text-lg text-[var(--muted)]">{m.create.description}</p><div className="mt-8"><CreateSecretForm locale={locale} copy={m.create}/></div></div>;}
